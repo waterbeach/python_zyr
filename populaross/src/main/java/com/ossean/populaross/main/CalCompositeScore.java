@@ -144,8 +144,9 @@ logger1.info("calculate score for osp_id: "+ospId+" score: "+score+"\n"
 			for(int i = 0;i<osplist.size();i++){
 				openSourcePrj = osplist.get(i);
 				calMatchScore(openSourcePrj);
+				ospDao.updatePointer(pointerTableName, sourceTableName, targetTableName, openSourcePrj.getId()+1);
 			}
-			ospDao.updatePointer(pointerTableName, sourceTableName, targetTableName, openSourcePrj.getId()+1);
+			
 		}
 	}
 	//读指针
