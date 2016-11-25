@@ -9,7 +9,29 @@
 
 	<name>populaross</name>
 	<url>http://maven.apache.org</url>
+	<build>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- m2eclipse wtp 0.12+ enabled to configure contextRoot, add by w.vela -->
