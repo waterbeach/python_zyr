@@ -18,7 +18,7 @@ public interface RelativeMemoToOpenSourceProjectDao {
 	public Map<String,String> getMemoTypeSource(@Param("memo_id") int memo_id,
 			@Param("targetTableName" )String targetTableName);
 	
-	//获取爬取时间
+	//获取爬取时间  extracted_time
 	@Select("select extracted_time from ${targetTableName} where id=#{memo_id}")
 	public String getCrawledTime(
 			@Param("memo_id") int memo_id,
@@ -76,5 +76,10 @@ public interface RelativeMemoToOpenSourceProjectDao {
 	public List<RelativeMemoToOpenSourceProject> getMatchRelativeMemo(
 			@Param("osp_id") int osp_id,
 			@Param("targetTableName") String targetTableName);
-
+	
+	// 读取项目id在一定时间区间对应的所有关联的帖子
+	@Select("select * from ${targetTableName} where osp_id = #{osp_id} and created_time>'2015-01-01 00:00:00' and created_time<'2016-11-01 00:00:00'")
+	public List<RelativeMemoToOpenSourceProject> getMatchRelativeMemoWithInterval(
+			@Param("osp_id") int osp_id,
+			@Param("targetTableName") String targetTableName);
 }

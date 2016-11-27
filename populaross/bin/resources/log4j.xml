@@ -4,13 +4,22 @@
 
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
-            <!--<param name="threshold" value="INFO" />-->
+            <param name="threshold" value="INFO" />
             <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n" />
         </layout>
     </appender>
 
     <appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="./log/detect_time.log" />
+        <param name="append" value="true"/>
+        <param name="encoding" value="GBK"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n" />
+        </layout>
+    </appender>
+    
+    <appender name="file1" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="./log/prj_sort.log" />
         <param name="append" value="true"/>
         <param name="encoding" value="GBK"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -29,6 +38,11 @@
     <logger name="cost_time" additivity="false">
        <level value="INFO"/>
         <appender-ref ref="file"/>
+    </logger>
+    
+    <logger name="prj_sort" additivity="false">
+       <level value="INFO"/>
+        <appender-ref ref="file1"/>
     </logger>
 
     <root>

@@ -15,6 +15,9 @@ import com.ossean.populaross.model.OspRankingMemos;
 
 public interface OpenSourceProjectDao {
 	
+	@Select("select id from open_source_projects where name=#{ospname}")
+	public int getOspIdFromOSPByName(@Param("ospname") String ospname);
+	
 	//INSERT POINTER
 	@Insert("insert into ${table} (`SourceTableName`,`TargetTableName`,`Pointer`) values (#{SourceTableName},#{TargetTableName},#{Pointer})")
 	public void insertPointer(@Param("table") String table, @Param("SourceTableName") String SourceTableName, @Param("TargetTableName") String TargetTableName, @Param("Pointer") int Pointer);

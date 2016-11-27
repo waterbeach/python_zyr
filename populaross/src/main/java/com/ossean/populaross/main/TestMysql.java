@@ -16,7 +16,7 @@ import com.ossean.populaross.model.OSPForRanking;
 import com.ossean.populaross.model.OpenSourceProject;
 import com.ossean.populaross.model.OspRankingMemos;
 import com.ossean.populaross.model.RelativeMemoToOpenSourceProject;
-import com.ossean.populaross.util.FileReader;
+import com.ossean.populaross.util.FileOperation;
 
 @Component
 public class TestMysql {

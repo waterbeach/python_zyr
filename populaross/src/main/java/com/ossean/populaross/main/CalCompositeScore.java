@@ -80,7 +80,7 @@ logger.info("memo_id : "+relativeMemoId+"; relative osp num:"+relativeOspNum+"; 
 		double score = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
 		//插表操作
 		ospDao.updateOpenSourceProjectScore(ospId, score);
-logger1.info("calculate score for osp_id: "+ospId+" score: "+score+"\n"
+logger.info("calculate score for osp_id: "+ospId+" score: "+score+"\n"
 		+"relative memos num: "+rmToOspList.size()+"\n"
 		+"cost time: "+(System.currentTimeMillis()-startTime)/60000+" minutes");
 	}
@@ -120,6 +120,7 @@ logger1.info("calculate score for osp_id: "+ospId+" score: "+score+"\n"
 		int startId;
 		OpenSourceProject openSourcePrj = null;
 		while(true){
+			long startTime = System.currentTimeMillis();
 			int maxId = ospDao.getMaxId(sourceTableName);
 			startId = readPointer(pointerTableName, sourceTableName, targetTableName);
 			if(startId > maxId){
@@ -146,6 +147,8 @@ logger1.info("calculate score for osp_id: "+ospId+" score: "+score+"\n"
 				calMatchScore(openSourcePrj);
 				ospDao.updatePointer(pointerTableName, sourceTableName, targetTableName, openSourcePrj.getId()+1);
 			}
+			logger1.info("calculate score for "+osplist.size()+" projects"
+					+"cost time: "+(System.currentTimeMillis()-startTime)/60000+" minutes");
 			
 		}
 	}
