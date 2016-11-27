@@ -15,12 +15,6 @@ public class OpenSourceProjectForRank {
  */ 
 	int osp_id;
 	String name;
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	int stackOverFlowReplyNum;
 	double stackOverFlowViewNum;
 	int oschinaTopicReplyNum;
@@ -29,32 +23,37 @@ public class OpenSourceProjectForRank {
 	double _51cto_blogViewNum;
 	int csdnBlogReplyNum;
 	double csdnBlogViewNum;
-	int csdnTopicReplyNum;
-	double csdnTopicViewNum;
-	int csdnNewsReplyNum;
-	double csdnNewsViewNum;
-	int cnblogsNewsReplyNum;
-	double cnblogsNewsViewNum;
+	int csdnaskReplyNum;
+	double csdnaskViewNum;
+	int csdnbbsReplyNum;
+	double csdnbbsViewNum;
 	int cnblogsTopicReplyNum;
 	double cnblogsTopicViewNum;
 	int dewenTopicReplyNum;
 	double dewenTopicViewNum;
-	int iteyeTopicReplyNum;
-	double iteyeTopicViewNum;
-	int iteyeBlogReplyNum;
-	double iteyeBlogViewNum;
-	int slashdotReplyNum;
-	double slashdotViewNum;
-	int linuxtoneReplyNum;
-	double linuxtoneViewNum;
-	int phpChinaReplyNum;
-	double phpChinaViewNum;
-	
+	int bokeyuanReplyNum;
+	double bokeyuanViewNum;
+//	int iteyeTopicReplyNum;
+//	double iteyeTopicViewNum;
+//	int iteyeBlogReplyNum;
+//	double iteyeBlogViewNum;
+//	int slashdotReplyNum;
+//	double slashdotViewNum;
+//	int linuxtoneReplyNum;
+//	double linuxtoneViewNum;
+//	int phpChinaReplyNum;
+//	double phpChinaViewNum;
 	public int getOsp_id() {
 		return osp_id;
 	}
 	public void setOsp_id(int osp_id) {
 		this.osp_id = osp_id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public int getStackOverFlowReplyNum() {
 		return stackOverFlowReplyNum;
@@ -104,41 +103,29 @@ public class OpenSourceProjectForRank {
 	public void setCsdnBlogViewNum(double csdnBlogViewNum) {
 		this.csdnBlogViewNum = csdnBlogViewNum;
 	}
-	public int getCsdnTopicReplyNum() {
-		return csdnTopicReplyNum;
+	public int getCsdnaskReplyNum() {
+		return csdnaskReplyNum;
 	}
-	public void setCsdnTopicReplyNum(int csdnTopicReplyNum) {
-		this.csdnTopicReplyNum = csdnTopicReplyNum;
+	public void setCsdnaskReplyNum(int csdnaskReplyNum) {
+		this.csdnaskReplyNum = csdnaskReplyNum;
 	}
-	public double getCsdnTopicViewNum() {
-		return csdnTopicViewNum;
+	public double getCsdnaskViewNum() {
+		return csdnaskViewNum;
 	}
-	public void setCsdnTopicViewNum(double csdnTopicViewNum) {
-		this.csdnTopicViewNum = csdnTopicViewNum;
+	public void setCsdnaskViewNum(double csdnaskViewNum) {
+		this.csdnaskViewNum = csdnaskViewNum;
 	}
-	public int getCsdnNewsReplyNum() {
-		return csdnNewsReplyNum;
+	public int getCsdnbbsReplyNum() {
+		return csdnbbsReplyNum;
 	}
-	public void setCsdnNewsReplyNum(int csdnNewsReplyNum) {
-		this.csdnNewsReplyNum = csdnNewsReplyNum;
+	public void setCsdnbbsReplyNum(int csdnbbsReplyNum) {
+		this.csdnbbsReplyNum = csdnbbsReplyNum;
 	}
-	public double getCsdnNewsViewNum() {
-		return csdnNewsViewNum;
+	public double getCsdnbbsViewNum() {
+		return csdnbbsViewNum;
 	}
-	public void setCsdnNewsViewNum(double csdnNewsViewNum) {
-		this.csdnNewsViewNum = csdnNewsViewNum;
-	}
-	public int getCnblogsNewsReplyNum() {
-		return cnblogsNewsReplyNum;
-	}
-	public void setCnblogsNewsReplyNum(int cnblogsNewsReplyNum) {
-		this.cnblogsNewsReplyNum = cnblogsNewsReplyNum;
-	}
-	public double getCnblogsNewsViewNum() {
-		return cnblogsNewsViewNum;
-	}
-	public void setCnblogsNewsViewNum(double cnblogsNewsViewNum) {
-		this.cnblogsNewsViewNum = cnblogsNewsViewNum;
+	public void setCsdnbbsViewNum(double csdnbbsViewNum) {
+		this.csdnbbsViewNum = csdnbbsViewNum;
 	}
 	public int getCnblogsTopicReplyNum() {
 		return cnblogsTopicReplyNum;
@@ -164,67 +151,79 @@ public class OpenSourceProjectForRank {
 	public void setDewenTopicViewNum(double dewenTopicViewNum) {
 		this.dewenTopicViewNum = dewenTopicViewNum;
 	}
-	public int getIteyeTopicReplyNum() {
-		return iteyeTopicReplyNum;
+	public int getBokeyuanReplyNum() {
+		return bokeyuanReplyNum;
 	}
-	public void setIteyeTopicReplyNum(int iteyeTopicReplyNum) {
-		this.iteyeTopicReplyNum = iteyeTopicReplyNum;
+	public void setBokeyuanReplyNum(int bokeyuanReplyNum) {
+		this.bokeyuanReplyNum = bokeyuanReplyNum;
 	}
-	public double getIteyeTopicViewNum() {
-		return iteyeTopicViewNum;
+	public double getBokeyuanViewNum() {
+		return bokeyuanViewNum;
 	}
-	public void setIteyeTopicViewNum(double iteyeTopicViewNum) {
-		this.iteyeTopicViewNum = iteyeTopicViewNum;
+	public void setBokeyuanViewNum(double bokeyuanViewNum) {
+		this.bokeyuanViewNum = bokeyuanViewNum;
 	}
-	public int getIteyeBlogReplyNum() {
-		return iteyeBlogReplyNum;
-	}
-	public void setIteyeBlogReplyNum(int iteyeBlogReplyNum) {
-		this.iteyeBlogReplyNum = iteyeBlogReplyNum;
-	}
-	public double getIteyeBlogViewNum() {
-		return iteyeBlogViewNum;
-	}
-	public void setIteyeBlogViewNum(double iteyeBlogViewNum) {
-		this.iteyeBlogViewNum = iteyeBlogViewNum;
-	}
-	public int getSlashdotReplyNum() {
-		return slashdotReplyNum;
-	}
-	public void setSlashdotReplyNum(int slashdotReplyNum) {
-		this.slashdotReplyNum = slashdotReplyNum;
-	}
-	public double getSlashdotViewNum() {
-		return slashdotViewNum;
-	}
-	public void setSlashdotViewNum(double slashdotViewNum) {
-		this.slashdotViewNum = slashdotViewNum;
-	}
-	public int getLinuxtoneReplyNum() {
-		return linuxtoneReplyNum;
-	}
-	public void setLinuxtoneReplyNum(int linuxtoneReplyNum) {
-		this.linuxtoneReplyNum = linuxtoneReplyNum;
-	}
-	public double getLinuxtoneViewNum() {
-		return linuxtoneViewNum;
-	}
-	public void setLinuxtoneViewNum(double linuxtoneViewNum) {
-		this.linuxtoneViewNum = linuxtoneViewNum;
-	}
-	public int getPhpChinaReplyNum() {
-		return phpChinaReplyNum;
-	}
-	public void setPhpChinaReplyNum(int phpChinaReplyNum) {
-		this.phpChinaReplyNum = phpChinaReplyNum;
-	}
-	public double getPhpChinaViewNum() {
-		return phpChinaViewNum;
-	}
-	public void setPhpChinaViewNum(double phpChinaViewNum) {
-		this.phpChinaViewNum = phpChinaViewNum;
-	}
-
+//	public int getIteyeTopicReplyNum() {
+//		return iteyeTopicReplyNum;
+//	}
+//	public void setIteyeTopicReplyNum(int iteyeTopicReplyNum) {
+//		this.iteyeTopicReplyNum = iteyeTopicReplyNum;
+//	}
+//	public double getIteyeTopicViewNum() {
+//		return iteyeTopicViewNum;
+//	}
+//	public void setIteyeTopicViewNum(double iteyeTopicViewNum) {
+//		this.iteyeTopicViewNum = iteyeTopicViewNum;
+//	}
+//	public int getIteyeBlogReplyNum() {
+//		return iteyeBlogReplyNum;
+//	}
+//	public void setIteyeBlogReplyNum(int iteyeBlogReplyNum) {
+//		this.iteyeBlogReplyNum = iteyeBlogReplyNum;
+//	}
+//	public double getIteyeBlogViewNum() {
+//		return iteyeBlogViewNum;
+//	}
+//	public void setIteyeBlogViewNum(double iteyeBlogViewNum) {
+//		this.iteyeBlogViewNum = iteyeBlogViewNum;
+//	}
+//	public int getSlashdotReplyNum() {
+//		return slashdotReplyNum;
+//	}
+//	public void setSlashdotReplyNum(int slashdotReplyNum) {
+//		this.slashdotReplyNum = slashdotReplyNum;
+//	}
+//	public double getSlashdotViewNum() {
+//		return slashdotViewNum;
+//	}
+//	public void setSlashdotViewNum(double slashdotViewNum) {
+//		this.slashdotViewNum = slashdotViewNum;
+//	}
+//	public int getLinuxtoneReplyNum() {
+//		return linuxtoneReplyNum;
+//	}
+//	public void setLinuxtoneReplyNum(int linuxtoneReplyNum) {
+//		this.linuxtoneReplyNum = linuxtoneReplyNum;
+//	}
+//	public double getLinuxtoneViewNum() {
+//		return linuxtoneViewNum;
+//	}
+//	public void setLinuxtoneViewNum(double linuxtoneViewNum) {
+//		this.linuxtoneViewNum = linuxtoneViewNum;
+//	}
+//	public int getPhpChinaReplyNum() {
+//		return phpChinaReplyNum;
+//	}
+//	public void setPhpChinaReplyNum(int phpChinaReplyNum) {
+//		this.phpChinaReplyNum = phpChinaReplyNum;
+//	}
+//	public double getPhpChinaViewNum() {
+//		return phpChinaViewNum;
+//	}
+//	public void setPhpChinaViewNum(double phpChinaViewNum) {
+//		this.phpChinaViewNum = phpChinaViewNum;
+//	}
+	
 	
 	
 	
