@@ -30,6 +30,7 @@ public class AnalysisAttributes {
 	
 	private List<RelativeMemoToOpenSourceProject> rm2ospList;
 	private RelativeMemoToOpenSourceProject rm2osp;
+	private OpenSourceProjectForRank ospForRank;
 	private static String relativeMemosTableName = "relative_memos";
 	private static Logger logger = LoggerFactory.getLogger("prj_sort");
 	
@@ -42,7 +43,7 @@ public class AnalysisAttributes {
 		int beforeReply,afterReply;
 		double beforeView,afterView;
 		Map<String,String> memosource;
-		OpenSourceProjectForRank ospForRank;
+		
 		
 		for(int i=0;i<ospList.length;i++){
 			 
