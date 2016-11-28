@@ -49,8 +49,8 @@ public class AnalysisAttributes {
 			 ospForRank = new OpenSourceProjectForRank();
 			 ospId = Integer.parseInt(ospList[i].split("#")[1]);
 			 ospName = ospList[i].split("#")[0];
-logger.info("prj Id: "+ospId);
-logger.info("prj name: "+ospName);
+System.out.println("prj Id: "+ospId);
+System.out.println("prj name: "+ospName);
 			 ospForRank.setOsp_id(ospId);
 			 ospForRank.setName(ospName);
 			 String targetTableName = getTargetTable(ospId);
@@ -60,7 +60,7 @@ logger.info("prj name: "+ospName);
 				 rm2osp = rm2ospList.get(j);
 				 memoId = rm2osp.getRelative_memo_id();
 				 memosource = rmToOspDao.getMemoTypeSource(memoId,relativeMemosTableName);
-logger.info(memoId+" "+memosource+"----------");
+System.out.println(memoId+" "+memosource+"----------");
 				 if(memosource.get("source")==null||memosource.equals(""))
 					 continue;
 				 int view = rm2osp.getView_num_crawled();
@@ -130,7 +130,7 @@ logger.info(memoId+" "+memosource+"----------");
 						+" "+"5:"+ospForRank.getCsdnBlogViewNum()+" "+"6:"+ospForRank.getCsdnBlogReplyNum()+" "+"7:"+ospForRank.getCsdnbbsViewNum()+" "+"8:"+ospForRank.getCsdnbbsReplyNum()+" "+"9:"+ospForRank.getCsdnaskViewNum()+" "+"10:"
 						+ospForRank.getCsdnaskReplyNum()+" "+"11:"+ospForRank.getCnblogsTopicViewNum()+" "+"12:"+ospForRank.getCnblogsTopicReplyNum()+" "+"13:"
 						+ospForRank.get_51cto_blogViewNum()+" "+"14:"+ospForRank.get_51cto_blogReplyNum()+" "+"15:"+ospForRank.getBokeyuanViewNum()+" "+"16:"+ospForRank.getBokeyuanReplyNum()+" "+"17:"+ospForRank.getDewenTopicViewNum()+" "+"18:"+ospForRank.getDewenTopicReplyNum()+"\n";
-			 logger.info(insertStr);
+System.out.println(insertStr);
 			 list.add(ospForRank);
 		}
 		return list;
@@ -195,9 +195,9 @@ logger.info(memoId+" "+memosource+"----------");
           for(int i=0;i<fileList.length;i++){
         	  String ospName = FileOperation.readFile(fileList[i]);
               String[] ospList = ospName.split(",");
-              logger.info(ospList[0]);
+System.out.println(ospList[0]);
               List<OpenSourceProjectForRank> rm2ospList = a.getAllAttributes(ospList);
-              logger.info("--------"+rm2ospList.size());
+System.out.println("--------"+rm2ospList.size());
          	  insertRankListToFile(rm2ospList, outFilePath, i+1);
           }
           
