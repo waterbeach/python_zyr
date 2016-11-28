@@ -49,8 +49,8 @@ public class AnalysisAttributes {
 			 ospForRank = new OpenSourceProjectForRank();
 			 ospId = Integer.parseInt(ospList[i].split("#")[1]);
 			 ospName = ospList[i].split("#")[0];
-//System.out.println("prj Id: "+ospId);
-//System.out.println("prj name: "+ospName);
+logger.info("prj Id: "+ospId);
+logger.info("prj name: "+ospName);
 			 ospForRank.setOsp_id(ospId);
 			 ospForRank.setName(ospName);
 			 String targetTableName = getTargetTable(ospId);
@@ -60,7 +60,7 @@ public class AnalysisAttributes {
 				 rm2osp = rm2ospList.get(j);
 				 memoId = rm2osp.getRelative_memo_id();
 				 memosource = rmToOspDao.getMemoTypeSource(memoId,relativeMemosTableName);
-//System.out.println(memoId+" "+memosource+"----------");
+logger.info(memoId+" "+memosource+"----------");
 				 if(memosource.get("source")==null||memosource.equals(""))
 					 continue;
 				 int view = rm2osp.getView_num_crawled();
@@ -124,38 +124,7 @@ public class AnalysisAttributes {
 						 ospForRank.setBokeyuanReplyNum(beforeReply+rm2osp.getReplies_num());
 						 ospForRank.setBokeyuanViewNum(beforeView+(view)/t);
 				  }
-//				  else if(memosource.get("source").equals("ITeye")){
-//					  if (memosource.get("memo_type").equals("blogs")||memosource.get("memo_type").equals("blog")){
-//						     beforeView = ospForRank.getIteyeBlogViewNum();
-//							 beforeReply = ospForRank.getIteyeBlogReplyNum();
-//							 ospForRank.setIteyeBlogReplyNum(beforeReply+rm2osp.getReplies_num());
-//							 ospForRank.setIteyeBlogViewNum(beforeView+(double)(view)/t);
-//					  }
-//					  else if(memosource.get("memo_type").equals("topic")||memosource.get("memo_type").equals("posts")){
-//					     beforeView = ospForRank.getIteyeTopicViewNum();
-//						 beforeReply = ospForRank.getIteyeTopicReplyNum();
-//						 ospForRank.setIteyeTopicReplyNum(beforeReply+rm2osp.getReplies_num());
-//						 ospForRank.setIteyeTopicViewNum(beforeView+(double)(view)/t);
-//				     }
-//				  }
-//				  else if(memosource.get("source").equals("slashdot")){
-//					     beforeView = ospForRank.getSlashdotViewNum();
-//						 beforeReply = ospForRank.getSlashdotReplyNum();
-//						 ospForRank.setSlashdotReplyNum(beforeReply+rm2osp.getReplies_num());
-//						 ospForRank.setSlashdotViewNum(beforeView+(view)/t);
-//				  }
-//				  else if(memosource.get("source").equals("linuxtone")){
-//					     beforeView = ospForRank.getLinuxtoneViewNum();
-//						 beforeReply = ospForRank.getLinuxtoneReplyNum();
-//						 ospForRank.setLinuxtoneReplyNum(beforeReply+rm2osp.getReplies_num());
-//						 ospForRank.setLinuxtoneViewNum(beforeView+(view)/t);
-//				  }
-//				  else if(memosource.get("source").equals("PhpChina")){
-//					     beforeView = ospForRank.getPhpChinaViewNum();
-//						 beforeReply = ospForRank.getPhpChinaReplyNum();
-//						 ospForRank.setPhpChinaReplyNum(beforeReply+rm2osp.getReplies_num());
-//						 ospForRank.setPhpChinaViewNum(beforeView+(view)/t);
-//				  }
+
 			 }
 			 String insertStr =ospForRank.getOsp_id()+" "+ospForRank.getName()+" "+"qid:1"+" "+"1:"+ospForRank.getStackOverFlowViewNum()+" "+"2:"+ospForRank.getStackOverFlowReplyNum()+" "+"3:"+ospForRank.getOschinaTopicViewNum()+" "+"4:"+ospForRank.getOschinaTopicReplyNum()
 						+" "+"5:"+ospForRank.getCsdnBlogViewNum()+" "+"6:"+ospForRank.getCsdnBlogReplyNum()+" "+"7:"+ospForRank.getCsdnbbsViewNum()+" "+"8:"+ospForRank.getCsdnbbsReplyNum()+" "+"9:"+ospForRank.getCsdnaskViewNum()+" "+"10:"
@@ -226,8 +195,9 @@ public class AnalysisAttributes {
           for(int i=0;i<fileList.length;i++){
         	  String ospName = FileOperation.readFile(fileList[i]);
               String[] ospList = ospName.split(",");
+logger.info(ospList[0]);
               List<OpenSourceProjectForRank> rm2ospList = a.getAllAttributes(ospList);
-              logger.info("--------"+rm2ospList.size());
+logger.info("--------"+rm2ospList.size());
          	  insertRankListToFile(rm2ospList, outFilePath, i+1);
           }
           
