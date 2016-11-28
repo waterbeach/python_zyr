@@ -140,7 +140,7 @@ logger.info(memoId+" "+memosource+"----------");
 		int length = list.size();
 		int orderNum = length;
 		String insertStr="";
-		OpenSourceProjectForRank ospForRank;
+		OpenSourceProjectForRank ospForRank = new OpenSourceProjectForRank();
 		for(int i=0;i<length;i++){
 			ospForRank = list.get(i);
 			insertStr += orderNum+" "+"qid:"+qid+" "+"1:"+ospForRank.getStackOverFlowViewNum()+" "+"2:"+ospForRank.getStackOverFlowReplyNum()+" "+"3:"+ospForRank.getOschinaTopicViewNum()+" "+"4:"+ospForRank.getOschinaTopicReplyNum()
@@ -195,9 +195,9 @@ logger.info(memoId+" "+memosource+"----------");
           for(int i=0;i<fileList.length;i++){
         	  String ospName = FileOperation.readFile(fileList[i]);
               String[] ospList = ospName.split(",");
-logger.info(ospList[0]);
+              logger.info(ospList[0]);
               List<OpenSourceProjectForRank> rm2ospList = a.getAllAttributes(ospList);
-logger.info("--------"+rm2ospList.size());
+              logger.info("--------"+rm2ospList.size());
          	  insertRankListToFile(rm2ospList, outFilePath, i+1);
           }
           
