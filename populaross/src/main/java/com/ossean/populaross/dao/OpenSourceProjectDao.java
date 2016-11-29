@@ -36,6 +36,9 @@ public interface OpenSourceProjectDao {
 	//读取表中最大id值
 	@Select("select max(id) from ${table}")
 	public int getMaxId(@Param("table") String table);
+	
+	@Select("select count(*) from ${table}")
+	public int getOspNum(@Param("table") String table);
 		
 //	@Select("select name,relative_memos_num from open_source_projects where name=#{ospname}")
 //	public OspRankingMemos getRelativeMemoNum(
@@ -50,9 +53,14 @@ public interface OpenSourceProjectDao {
 //			@Param("id") int id);
 
 	// 读取一定数量的项目信息
-	@Select("select * from open_source_projects where id>=#{start} limit #{size}")
+	@Select("select * from open_source_projects where id>=#{start}  limit #{size}")
 	public List<OpenSourceProject> getProjectsByBatch(
-			@Param("start") int start, @Param("size") int size);
+			@Param("start") int start,@Param("size") int size);
+	
+	// 读取一定数量的项目信息
+	@Select("select * from ${table} where id>#{start} and id<=#{stop} limit #{size}")
+	public List<OpenSourceProject> getProjectsByBatchWithInterval(@Param("table") String table,
+			@Param("start") int start,@Param("stop") int stop ,@Param("size") int size);
 
 //	//更新项目标签字段tags和权重更高的标签字段tags_for_search
 //	@Update("update open_source_projects set tags=#{tags}, tags_for_search = #{tagsForSearch} where id=#{id}")

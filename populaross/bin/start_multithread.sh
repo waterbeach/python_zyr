@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 find ./target/classes -name "*.xml"|xargs rm -f
 
 
@@ -16,4 +17,4 @@ JVM_ARGS="-Xmn98m -Xmx1024m -Xms512m -XX:NewRatio=4 -XX:SurvivorRatio=4 -XX:MaxT
 #echo JVM_ARGS=$JVM_ARGS
 #ulimit -n 400000
 #echo "" > nohup.out
-java $JVM_ARGS -classpath $CLASSPATH com.ossean.populaross.main.AnalysisAttributes >>log/AnalysisAttributes.log 2>&1 &
+java $JVM_ARGS -classpath $CLASSPATH com.ossean.populaross.main.CalScoreProcess >>log/CalScoreProcess.log 2>&1 &

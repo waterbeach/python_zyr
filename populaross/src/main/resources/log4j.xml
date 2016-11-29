@@ -14,7 +14,7 @@
         <param name="append" value="true"/>
         <param name="encoding" value="GBK"/>
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n" />
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %t ## %m%n" />
         </layout>
     </appender>
     
@@ -31,7 +31,7 @@
     <appender name="file_log" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="./log/loginfo.log" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n" />
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %t ## %m%n" />
         </layout>
     </appender>
 
