@@ -85,7 +85,7 @@ public class CalScoreThread implements Runnable{
 	public void calMatchScore(OpenSourceProject osp){
 		int relativeOspNum = 0;
 		int relativeMemosNum;
-		int replyNum,viewNum,monthNum;
+		int replyNum,viewNum,monthNum=1;
         int ospId = osp.getId();
         int relativeMemoId;
         double scoreForOsp = 0;
@@ -108,7 +108,13 @@ public class CalScoreThread implements Runnable{
 			relativeOspNum = getRelativeOspNum(rmToOsp.getRelative_memo_id());
 			replyNum = rmToOsp.getReplies_num();
 			viewNum = rmToOsp.getView_num_crawled();
+			try{
 			monthNum = GetTime.getMonth(rmToOsp.getCreated_time(),rmToOspDao.getCrawledTime(relativeMemoId, relativeMemosTableName));
+			}catch(Exception e){
+				System.out.println(rmToOsp.getId()+" ospid:"+rmToOsp.getOsp_id()+" "+ rmToOsp.getCreated_time());
+				System.out.println("memoid:"+relativeMemoId +" | table "+relativeMemosTableName);
+				System.out.println(e);
+			}
 			if(relativeOspNum !=0)
 				scoreForOsp += (double)(replyNum+(double)viewNum/monthNum)/relativeOspNum;	
 			else
