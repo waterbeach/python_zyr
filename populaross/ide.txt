@@ -1,1 +1,0 @@
-Eclipse#770698,Vim#770788,NetBeans#770729,Sublime Text#770947,IntelliJ IDEA#770708,Xamarin#770308,Code::Blocks#770768,Emacs#770041,pyCharm#769982,Cloud9 IDE#770101,Light Table#1129146,Aptana#770253,MonoDevelop#770928,SharpDevelop#770414

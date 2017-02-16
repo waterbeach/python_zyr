@@ -1,1 +1,0 @@
-Scikit-learn#969939,TensorFlow#771145,Theano#942024,Caffe#961081,Gensim#22342,Pylearn2#166577,Statsmodels#16145,Shogun#935437,Chainer#771714,NuPIC#973462,Neon#775346,Nilearn#47025,Orange#945137,Pymc#366930,PyBrain#1022269,Fuel#943433,PyMVPA#949446,Annoy#725736,Deap#87116,Pattern#117468
