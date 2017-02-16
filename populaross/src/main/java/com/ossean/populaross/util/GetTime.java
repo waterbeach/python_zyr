@@ -16,9 +16,10 @@ public class GetTime {
 				created = df.parse(created_time);
 				crawler = df.parse(crawled_time);
 			} catch (ParseException e) {
-				e.printStackTrace();
+				
 				System.out.println(created_time);
 				System.out.println(crawled_time);
+				e.printStackTrace();
 			}
 			long diff = crawler.getTime() - created.getTime();
 			int  days = (int) (diff/(1000*60*60*24));
