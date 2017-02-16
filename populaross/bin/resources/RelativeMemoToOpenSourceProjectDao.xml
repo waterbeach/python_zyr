@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.ossean.populaross.dao.RelativeMemoToOpenSourceProjectDao">  
+  
+    <resultMap type="RelativeMemoToOpenSourceProject" id="rm2OspResultMap">
+		<id property="id" column="id"/>
+		<result property="osp_id" column="osp_id"/>
+		<result property="relative_memo_id" column="relative_memo_id"/>
+		<result property="match_weight" column="match_weight"/>
+		<result property="replies_num" column="replies_num"/>
+		<result property="view_num_crawled" column="view_num_crawled"/>
+		<result property="memo_type" column="memo_type"/>
+		<result property="created_time" column="created_time" />
+		<result property="match_time" column="match_time" />
+	</resultMap>  
+     <!--得到该项目匹配的帖子-->  
+    <select id="getRmForOspId"  resultType="RelativeMemoToOpenSourceProject" resultMap="rm2OspResultMap">  
+        <![CDATA[  
+            SELECT * from #{0} 
+                WHERE osp_id = #{1}   
+        ]]>    
+    </select>
+    <!--批量插入帖子-->
+   	<insert id="insertRm2OspBatch" parameterType="java.util.List" useGeneratedKeys="true">
+   		
+			insert into db_rm2osp_zyr
+			(osp_id,relative_memo_id,match_weight,replies_num,view_num_crawled,memo_type,created_time,match_time,crawled_time)
+			values
+			<foreach collection="list" item="rm2osp" index="index" 
+			separator=","  >
+			(#{rm2osp.osp_id},#{rm2osp.relative_memo_id},#{rm2osp.match_weight},#{rm2osp.replies_num},#{rm2osp.view_num_crawled},#{rm2osp.memo_type},#{rm2osp.created_time},#{rm2osp.match_time},#{rm2osp.crawled_time})
+			</foreach>
+	</insert>
+       
+</mapper>  
