@@ -25,13 +25,21 @@ def dealRelation():
 		print("Fail", e)
 	cur = cxn.cursor()
 	sql = "select distinct gather_projects_ids from edd_relations"
+	sql1 = "select id from gather_projects"
 	count = 0;
 	cur.execute(sql)
 	relationList = cur.fetchall()
+	cur.execute(sql1)
+	idList = []
 	for rel in relationList:
 		
 		prjIdList = splitGatherPrjIds(rel[0])
+		
 		count += len(prjIdList)
+		for id in prjIdList:
+			if id in idList:
+				print(id)
+		idList.extend(prjIdList)
 		if count % 10000 == 0:
 			print("we have deal %d relation entrys!!!"% count)
 
