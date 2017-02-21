@@ -86,8 +86,8 @@ public interface OpenSourceProjectDao {
 //	@Update("UPDATE open_source_projects SET tags = ''")
 //	public void emptyOspTags();
 	
-	@Update("update ${table} set composite_score  = #{score} where id = #{prjId}")
-	public void updateOpenSourceProjectScore(@Param("table") String table,@Param("prjId") int prjId,@Param("score") double score);
+	@Update("update ${table} set composite_score  = #{score},relative_memos_num  = #{relative_memos_num}  where id = #{prjId}")
+	public void updateOpenSourceProjectScore(@Param("table") String table,@Param("prjId") int prjId,@Param("score") double score,@Param("relative_memos_num") int  relative_memos_num);
 	
 	@Update("update ${table} set relative_memos_num  = #{relative_memos_num} where id = #{prjId}")
 	public void updateOpenSourceProjectMemosNum(@Param("table") String table,@Param("prjId") int prjId,@Param("relative_memos_num") int  relative_memos_num);

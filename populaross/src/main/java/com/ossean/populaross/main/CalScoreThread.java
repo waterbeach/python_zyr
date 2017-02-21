@@ -123,8 +123,8 @@ public class CalScoreThread implements Runnable{
 		BigDecimal b = new BigDecimal(scoreForOsp); 
 		double score = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
 		//插表操作
-		ospDao.updateOpenSourceProjectScore(targetTableName,ospId, score);
-		ospDao.updateOpenSourceProjectMemosNum(targetTableName,ospId, relativeMemosNum);
+		ospDao.updateOpenSourceProjectScore(targetTableName,ospId, score,relativeMemosNum);
+		//ospDao.updateOpenSourceProjectMemosNum(targetTableName,ospId, relativeMemosNum);
 //logger1.info(" calculate score for osp_id: "+ospId+" score: "+score+"\n"
 //		+"relative memos num: "+rmToOspList.size()+"\n"
 //		+"cost time: "+(System.currentTimeMillis()-startTime)/1000+" seconds");
