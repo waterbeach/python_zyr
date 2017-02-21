@@ -65,8 +65,15 @@ public class CalScoreThread implements Runnable{
 				logger.info(threadName+" cost time: "+(System.currentTimeMillis()-startTime)/60000+" minutes");
 				break;
 			}
+			if(ospDao.getProjectsByBatchWithInterval(sourceTableName,startId,stopId,batchSize) == null || 
+					ospDao.getProjectsByBatchWithInterval(sourceTableName,startId,stopId,batchSize).size() ==0){
+				logger.info(threadName+" 影响力分数已经计算完毕!");
+				logger.info(threadName+" cost time: "+(System.currentTimeMillis()-startTime)/60000+" minutes");
+				break;
+			}
+			
 			List<OpenSourceProject> osplist = ospDao.getProjectsByBatchWithInterval(sourceTableName,startId,stopId,batchSize);
-
+				
 			for(int i = 0,len=osplist.size();i<len;i++){
 				openSourcePrj = osplist.get(i);
 				calMatchScore(openSourcePrj);
