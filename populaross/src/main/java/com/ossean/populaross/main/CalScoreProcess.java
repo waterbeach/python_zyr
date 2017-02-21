@@ -73,7 +73,7 @@ public class CalScoreProcess {
 	            }
 	            try {
 	            	logger.info(".......sleeping......");
-					Thread.sleep(20000);
+					Thread.sleep(10*60*000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					logger.error(e);

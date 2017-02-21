@@ -83,7 +83,7 @@ public class CalScoreThread implements Runnable{
 
 	//(reply+view/t)*1/m
 	public void calMatchScore(OpenSourceProject osp){
-		int relativeOspNum = 0;
+		//int relativeOspNum = 0;
 		int relativeMemosNum;
 		int replyNum,viewNum,monthNum=1;
         int ospId = osp.getId();
@@ -105,7 +105,7 @@ public class CalScoreThread implements Runnable{
 			relativeMemoId = rmToOsp.getRelative_memo_id();
 //logger.info(Thread.currentThread().getName()+" memo_id : "+relativeMemoId);
 			//和帖子相关的项目数目
-			relativeOspNum = getRelativeOspNum(rmToOsp.getRelative_memo_id());
+			//relativeOspNum = getRelativeOspNum(rmToOsp.getRelative_memo_id());
 			replyNum = rmToOsp.getReplies_num();
 			viewNum = rmToOsp.getView_num_crawled();
 			try{
@@ -115,10 +115,10 @@ public class CalScoreThread implements Runnable{
 				System.out.println("memoid:"+relativeMemoId +" | table "+relativeMemosTableName);
 				System.out.println(e);
 			}
-			if(relativeOspNum !=0)
-				scoreForOsp += (double)(replyNum+(double)viewNum/monthNum)/relativeOspNum;	
-			else
-				scoreForOsp += (double)(replyNum+(double)viewNum/monthNum);
+//			if(relativeOspNum !=0)
+//				scoreForOsp += (double)(replyNum+(double)viewNum/monthNum)/relativeOspNum;	
+//			else
+			scoreForOsp += (double)(replyNum+(double)viewNum/monthNum);
 		}
 		BigDecimal b = new BigDecimal(scoreForOsp); 
 		double score = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();

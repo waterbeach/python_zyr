@@ -58,7 +58,7 @@ public interface OpenSourceProjectDao {
 			@Param("start") int start,@Param("size") int size);
 	
 	// 读取一定数量的项目信息
-	@Select("select * from ${table} where id>#{start} and id<=#{stop} limit #{size}")
+	@Select("select * from ${table} where id>#{start} and id<=#{stop} and filtration=2 limit #{size}")
 	public List<OpenSourceProject> getProjectsByBatchWithInterval(@Param("table") String table,
 			@Param("start") int start,@Param("stop") int stop ,@Param("size") int size);
 
