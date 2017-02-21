@@ -73,11 +73,11 @@ public class CalCompositeScore {
 			relativeMemoId = rmToOsp.getRelative_memo_id();
 //logger.info("memo_id : "+relativeMemoId);
 			//和帖子相关的项目数目
-			relativeOspNum = getRelativeOspNum(rmToOsp.getRelative_memo_id());
+			//relativeOspNum = getRelativeOspNum(rmToOsp.getRelative_memo_id());
 			replyNum = rmToOsp.getReplies_num();
 			viewNum = rmToOsp.getView_num_crawled();
 			monthNum = GetTime.getMonth(rmToOsp.getCreated_time(),rmToOspDao.getCrawledTime(relativeMemoId, relativeMemosTableName));
-			scoreForOsp += (double)(replyNum+(double)viewNum/monthNum)/relativeOspNum;				
+			scoreForOsp += (double)(replyNum+(double)viewNum/monthNum);				
 //logger.info("memo_id : "+relativeMemoId+"; relative osp num:"+relativeOspNum+"; reply num: "+replyNum+"; view num: "+viewNum+"; month num:"+monthNum+"score:"+scoreForOsp);
 		}
 		BigDecimal b = new BigDecimal(scoreForOsp); 
