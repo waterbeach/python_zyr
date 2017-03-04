@@ -13,6 +13,7 @@ html
 sql
 asp
 jsp
+json
 php
 perl
 swift

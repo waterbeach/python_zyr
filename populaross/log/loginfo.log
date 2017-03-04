@@ -1,0 +1,54 @@
+17-03-04 10:35:39,338 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@526fd58f: startup date [Sat Mar 04 10:35:39 CST 2017]; root of context hierarchy
+17-03-04 10:35:39,472 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:35:39,832 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:35:41,055 INFO  main ## Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6d441cce: defining beans [dataSourceOne,sqlSessionFactoryOne,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,analysisAttributes,calCompositeScore,calScoreProcess,calScoreThread,testMysql,OSPForRanking,fileOperation,openSourceProjectDao,relativeMemoToOpenSourceProjectDao,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17-03-04 10:35:41,285 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f068f06: startup date [Sat Mar 04 10:35:41 CST 2017]; root of context hierarchy
+17-03-04 10:35:41,292 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:35:41,357 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:35:41,567 INFO  main ## Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3c5508ab: defining beans [dataSourceOne,sqlSessionFactoryOne,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,analysisAttributes,calCompositeScore,calScoreProcess,calScoreThread,testMysql,OSPForRanking,fileOperation,openSourceProjectDao,relativeMemoToOpenSourceProjectDao,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17-03-04 10:35:41,811 INFO  pool-1-thread-1 ## PrjThread1 is begin~
+17-03-04 10:35:41,815 INFO  pool-1-thread-2 ## PrjThread2 is begin~
+17-03-04 10:35:41,817 INFO  pool-1-thread-5 ## PrjThread5 is begin~
+17-03-04 10:35:41,820 INFO  pool-1-thread-6 ## PrjThread6 is begin~
+17-03-04 10:35:41,820 INFO  main ## current env thread nums: 7
+17-03-04 10:35:41,821 INFO  pool-1-thread-4 ## PrjThread4 is begin~
+17-03-04 10:35:41,821 INFO  main ## .......sleeping......
+17-03-04 10:35:41,824 INFO  pool-1-thread-3 ## PrjThread3 is begin~
+17-03-04 10:35:41,824 INFO  pool-1-thread-7 ## PrjThread7 is begin~
+17-03-04 10:35:41,968 INFO  PrjThread5 ## PrjThread5 影响力分数已经计算完毕!
+17-03-04 10:35:41,969 INFO  PrjThread5 ## PrjThread5 cost time: 0 minutes
+17-03-04 10:35:41,969 INFO  PrjThread5 ## PrjThread5 is stop
+17-03-04 10:35:42,077 INFO  PrjThread4 ## PrjThread4 影响力分数已经计算完毕!
+17-03-04 10:35:42,077 INFO  PrjThread4 ## PrjThread4 cost time: 0 minutes
+17-03-04 10:35:42,078 INFO  PrjThread4 ## PrjThread4 is stop
+17-03-04 10:35:42,137 INFO  PrjThread7 ## PrjThread7 影响力分数已经计算完毕!
+17-03-04 10:35:42,138 INFO  PrjThread7 ## PrjThread7 cost time: 0 minutes
+17-03-04 10:35:42,138 INFO  PrjThread7 ## PrjThread7 is stop
+17-03-04 10:35:42,145 INFO  PrjThread6 ## PrjThread6 影响力分数已经计算完毕!
+17-03-04 10:35:42,145 INFO  PrjThread6 ## PrjThread6 cost time: 0 minutes
+17-03-04 10:35:42,146 INFO  PrjThread6 ## PrjThread6 is stop
+17-03-04 10:35:42,181 INFO  PrjThread2 ## PrjThread2 影响力分数已经计算完毕!
+17-03-04 10:35:42,182 INFO  PrjThread2 ## PrjThread2 cost time: 0 minutes
+17-03-04 10:35:42,182 INFO  PrjThread2 ## PrjThread2 is stop
+17-03-04 10:35:42,191 INFO  PrjThread3 ## PrjThread3 影响力分数已经计算完毕!
+17-03-04 10:35:42,192 INFO  PrjThread3 ## PrjThread3 cost time: 0 minutes
+17-03-04 10:35:42,192 INFO  PrjThread3 ## PrjThread3 is stop
+17-03-04 10:35:51,716 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10dd95f6: startup date [Sat Mar 04 10:35:51 CST 2017]; root of context hierarchy
+17-03-04 10:35:51,796 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:35:51,960 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:35:52,654 INFO  main ## Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5e1e6cde: defining beans [dataSourceOne,sqlSessionFactoryOne,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,analysisAttributes,calCompositeScore,calScoreProcess,calScoreThread,testMysql,OSPForRanking,fileOperation,openSourceProjectDao,relativeMemoToOpenSourceProjectDao,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17-03-04 10:35:52,835 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55d580a8: startup date [Sat Mar 04 10:35:52 CST 2017]; root of context hierarchy
+17-03-04 10:35:52,842 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:35:52,890 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:36:29,037 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10dd95f6: startup date [Sat Mar 04 10:36:29 CST 2017]; root of context hierarchy
+17-03-04 10:36:29,114 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:36:29,322 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:36:30,021 INFO  main ## Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22d282a3: defining beans [dataSourceOne,sqlSessionFactoryOne,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,analysisAttributes,calCompositeScore,calScoreProcess,calScoreThread,testMysql,updateLanguage,OSPForRanking,fileOperation,openSourceProjectDao,relativeMemoToOpenSourceProjectDao,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17-03-04 10:38:05,302 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10dd95f6: startup date [Sat Mar 04 10:38:05 CST 2017]; root of context hierarchy
+17-03-04 10:38:05,375 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:38:05,525 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:38:06,202 INFO  main ## Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22d282a3: defining beans [dataSourceOne,sqlSessionFactoryOne,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,analysisAttributes,calCompositeScore,calScoreProcess,calScoreThread,testMysql,updateLanguage,OSPForRanking,fileOperation,openSourceProjectDao,relativeMemoToOpenSourceProjectDao,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17-03-04 10:38:36,361 INFO  main ## Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10dd95f6: startup date [Sat Mar 04 10:38:36 CST 2017]; root of context hierarchy
+17-03-04 10:38:36,437 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext-myBatis.xml]
+17-03-04 10:38:36,560 INFO  main ## Loading XML bean definitions from file [E:\some_code\github_waterbeach_python\populaross\target\classes\applicationContext.xml]
+17-03-04 10:38:37,290 INFO  main ## Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@22d282a3: defining beans [dataSourceOne,sqlSessionFactoryOne,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,analysisAttributes,calCompositeScore,calScoreProcess,calScoreThread,testMysql,updateLanguage,OSPForRanking,fileOperation,openSourceProjectDao,relativeMemoToOpenSourceProjectDao,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
