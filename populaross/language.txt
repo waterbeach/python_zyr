@@ -17,3 +17,6 @@ json
 php
 perl
 swift
+bash
+shell
+xml
