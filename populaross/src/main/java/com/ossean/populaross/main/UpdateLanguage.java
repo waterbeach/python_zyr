@@ -19,6 +19,7 @@ public class UpdateLanguage {
 		for(String str : keywords){
 			openSourceProjectDao.updateOpenSourceProjectWithName(TableName.targetTableName , str,0, 0);
 		}
+		System.out.println("update complete~");
 	}
 
 }
