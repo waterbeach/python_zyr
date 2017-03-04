@@ -21,7 +21,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/ossean_production?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true" />
 		<property name="username" value="root" />
-		<property name="password" value="1234" />
+		<property name="password" value="123456" />
 		<property name="validationQuery" value="SELECT 1" />
   		<property name="testOnBorrow" value="true"/>
 	</bean>

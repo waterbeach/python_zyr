@@ -40,18 +40,6 @@ public interface OpenSourceProjectDao {
 	@Select("select count(*) from ${table} where filtration = 2")
 	public int getOspNum(@Param("table") String table);
 		
-//	@Select("select name,relative_memos_num from open_source_projects where name=#{ospname}")
-//	public OspRankingMemos getRelativeMemoNum(
-//			@Param("ospname") String ospname);
-//	
-//	@Select("select id from open_source_projects where name=#{ospname}")
-//	public int getOspIdFromOSP(
-//			@Param("ospname") String ospname);
-//	
-//	@Select("select view_num from open_source_projects where id=#{id}")
-//	public int getOspViewNumFromOSP(
-//			@Param("id") int id);
-
 	// 读取一定数量的项目信息
 	@Select("select * from ${table} where id>=#{start} and filtration=2 limit #{size}")
 	public List<OpenSourceProject> getProjectsByBatch(@Param("table") String table,
@@ -67,33 +55,10 @@ public interface OpenSourceProjectDao {
 	public List<OpenSourceProject> getProjectsByBatchWithLimit(@Param("table") String table,
 			@Param("startId") int startId,@Param("size") int size);
 
-//	//更新项目标签字段tags和权重更高的标签字段tags_for_search
-//	@Update("update open_source_projects set tags=#{tags}, tags_for_search = #{tagsForSearch} where id=#{id}")
-//	public void updatePrjTags(@Param("id") int id,
-//			@Param("tags") String tags,
-//			@Param("tagsForSearch") String tagsForSearch);
-//
-//	// 对项目标签属性进行更新
-//	@Update("update open_source_projects set tags=#{tags}, tags_for_search = #{tagsForSearch} where id=#{id}")
-//	public void updateTagsOfProject(@Param("id") int id,
-//			@Param("tags") String tags);
-
-	// 批量获取项目
-//	@Select("select id,source,url,filtration from open_source_projects limit #{batchSize}")
-//	public List<OpenSourceProject> getBatchPrjs(
-//			@Param("batchSize") int batchSize);
-//
-//	// filtration为1表示保留，为2表示之前保留的且已处理，为0表示不保留
-//	@Update("update open_source_projects set filtration = #{filtration} where id = #{prjId}")
-//	public void updateFiltratedPrj(@Param("prjId") int prjId,
-//			@Param("filtration") int filtration);
-//
-//	@Update("UPDATE open_source_projects SET tags = ''")
-//	public void emptyOspTags();
 	
 	@Update("update ${table} set composite_score  = #{score},relative_memos_num  = #{relative_memos_num}  where id = #{prjId}")
 	public void updateOpenSourceProjectScore(@Param("table") String table,@Param("prjId") int prjId,@Param("score") double score,@Param("relative_memos_num") int  relative_memos_num);
 	
-	@Update("update ${table} set relative_memos_num  = #{relative_memos_num} where id = #{prjId}")
-	public void updateOpenSourceProjectMemosNum(@Param("table") String table,@Param("prjId") int prjId,@Param("relative_memos_num") int  relative_memos_num);
+	@Update("update ${table} set composite_score  = #{score},relative_memos_num  = #{relative_memos_num} where name = #{name}")
+	public void updateOpenSourceProjectWithName(@Param("table") String table,@Param("name") String name,@Param("score") double score,@Param("relative_memos_num") int  relative_memos_num);
 }
