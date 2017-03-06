@@ -77,7 +77,9 @@ public class CalScoreThread implements Runnable{
 				
 			for(int i = 0,len=osplist.size();i<len;i++){
 				openSourcePrj = osplist.get(i);
-				calMatchScore(openSourcePrj);
+				rmToOspList =  getRelativeMemoList(openSourcePrj.getId());
+				if(rmToOspList.size() != openSourcePrj.getRelative_memos_num())
+					calMatchScore(openSourcePrj);
 			}
 			startId = openSourcePrj.getId();
 			logger1.info(threadName+" :calculate score for "+osplist.size()+ " projects"
