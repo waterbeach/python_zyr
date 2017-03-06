@@ -18,6 +18,7 @@ import com.ossean.populaross.dao.OpenSourceProjectDao;
 import com.ossean.populaross.dao.RelativeMemoToOpenSourceProjectDao;
 import com.ossean.populaross.model.OpenSourceProject;
 import com.ossean.populaross.model.RelativeMemoToOpenSourceProject;
+import com.ossean.populaross.util.FileReader;
 import com.ossean.populaross.util.GetTime;
 
 @Component("calScoreThread")
@@ -90,6 +91,11 @@ public class CalScoreThread implements Runnable{
 
 	//(reply+view/t)*1/m
 	public void calMatchScore(OpenSourceProject osp){
+		
+		List<String> keywords = FileReader.read("./language.txt");
+		
+		if(keywords.contains(osp.getName().toLowerCase().trim()))
+			return;
 		//int relativeOspNum = 0;
 		int relativeMemosNum;
 		int replyNum,viewNum,monthNum=1;

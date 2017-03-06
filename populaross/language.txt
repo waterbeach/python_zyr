@@ -20,3 +20,8 @@ swift
 bash
 shell
 xml
+http
+ios
+html5
+go
+windows
