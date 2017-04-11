@@ -6,7 +6,7 @@ def connect():
 		import pymysql
 	except Exception as e:
 		print("Fail", e)
-	cxn = pymysql.connect(user='root',passwd='NUDTpdl@123',host='localhost',db='ossean_production')
+	cxn = pymysql.connect(user='root',passwd='123456',host='localhost',db='ossean_production')
 	return cxn
 
 def splitGatherPrjIds(prjIdsStr):
